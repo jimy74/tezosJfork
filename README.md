@@ -8,7 +8,7 @@ A Java SDK for Tezos node interactions with [Conseil](https://cryptonomic.github
 
 The TezosJ SDK library enables plain Java developers to create applications that communicates with Tezos blockchain.
 
-The library is written in Java and is based on Gradle framework. This repository contains the library source code and a Main class to test some features.
+The library is written in Java and is based on Gradle framework. This repository contains the library source code and a milfont.com.tezosj.Main class to test some features.
 
 ## Requirements
 
@@ -18,7 +18,7 @@ The library is written in Java and is based on Gradle framework. This repository
 
 ## Getting started
 
-- Clone the repository, import as a Gradle Project into your Java IDE and run the Main class.
+- Clone the repository, import as a Gradle Project into your Java IDE and run the milfont.com.tezosj.Main class.
 - Or download the JAR (https://github.com/tezosRio/TezosJ_plainJava/blob/master/tezosj-sdk-plain-java-1.3.9.jar) and add to your project's classpath.
 
 
@@ -247,7 +247,7 @@ The main purpose of TezosJ SDK library is to foster development of applications 
 - TezosJ uses BitcoinJ Java Library https://github.com/bitcoinj/bitcoinj.
 - Special thanks to Tezzigator (https://twitter.com/@tezzigator) for providing the code for Tezos Key Generation in Java.
 - Special thanks to Klassare who helped us to implement Batch Transactions.
-- Special thanks to Raphaël Cauderlier and @FFF who both helped to understand how to build entrypoint parameters messages.
+- Special thanks to Raphaï¿½l Cauderlier and @FFF who both helped to understand how to build entrypoint parameters messages.
 - Special thanks to Matej Sima for helping to solve many issues regarding FA1.2 contract calling.
 - Special thanks to my wife and son, for being so helpful and patience during my neverending working hours.
 

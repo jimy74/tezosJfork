@@ -43,7 +43,7 @@ jacocoTestReport {
 dependencies {
     implementation 'com.google.guava:guava:23.0'
     implementation 'com.goterl.lazycode:lazysodium-java:3.3.0'
-    implementation 'net.java.dev.jna:jna:3.3.0'
+    implementation 'net.java.dev.jna:jna:5.6.0'
     implementation 'org.slf4j:slf4j-simple:1.7.7'
     implementation 'org.json:json:20171018'
     implementation 'org.apache.commons:commons-lang3:3.7'
@@ -55,4 +55,16 @@ dependencies {
     testCompile "org.hamcrest:hamcrest-all:1.3"
 
     testImplementation 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "milfont.com.tezosj.Main",
+                   "Class-Path": configurations.runtime.files.collect { "lib/$it.name" }.join(' '),
+                   "Implementation-Version": project.version
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }

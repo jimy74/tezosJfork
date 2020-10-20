@@ -1,3 +1,5 @@
+package milfont.com.tezosj;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.json.JSONObject;

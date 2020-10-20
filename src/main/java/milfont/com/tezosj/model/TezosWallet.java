@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyStore;
 import java.security.KeyStore.SecretKeyEntry;
 import java.util.ArrayList;
@@ -324,6 +325,10 @@ public class TezosWallet implements FA12_Interface
       
    }
 
+   public String getPrivateKey()
+   {
+      return new String(privateKey, StandardCharsets. UTF_8);
+   }
    
    private void initDomainClasses()
    {
@@ -333,7 +338,7 @@ public class TezosWallet implements FA12_Interface
 
    // This method generates the Private Key, Public Key and Public Key hash (Tezos
    // address).
-   private void generateKeys(String passphrase) throws Exception
+   public String generateKeys(String passphrase) throws Exception
    {
 
       // Decrypts the mnemonic words stored in class properties.
@@ -408,6 +413,7 @@ public class TezosWallet implements FA12_Interface
       // Encrypts and stores Public Key Hash into wallet's class property.
       this.publicKeyHash = encryptBytes(Base58.encode(prefixedPKhashWithChecksum).getBytes(), getEncryptionKey());
 
+      return "{\"pkh\":\"\", \"pk\":\"\", \"sk\":\"\"}";
    }
 
    // Generates the mnemonic words.
